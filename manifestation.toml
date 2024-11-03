@@ -1,16 +1,15 @@
 
-id = "WebfishingSampleMod"
-name = "Webfishing Sample Mod"
-description = "This is a sample mod."
+id = "VoiceStuff"
+name = "VoiceStuff"
+description = "Expands the limits on voice pitch and speed in the options menu. Additionally, scrolling on the slider won't make it scroll up and holding shift will increase the granularity."
 version = "1.0.0"
-homepage = "https://github.com/NotNite/WebfishingSampleMod"
-author = "You!"
+homepage = "https://github.com/Awesomerly/VoiceStuff"
+author = "Awesomerly"
 
 icon = "icon.png"
 readme = "README.md"
 
 [project]
-csharp = "./WebfishingSampleMod/WebfishingSampleMod.csproj"
 godot = "./project/project.godot"
 
 [[dependencies]]

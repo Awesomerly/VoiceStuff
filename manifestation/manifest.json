@@ -1,0 +1,9 @@
+{
+  "name": "VoiceStuff",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/Awesomerly/VoiceStuff",
+  "description": "Expands the limits on voice pitch and speed in the options menu. Additionally, scrolling on the slider won't make it scroll up and holding shift will increase the granularity.",
+  "dependencies": [
+    "NotNet-GDWeave-2.0.13"
+  ]
+}

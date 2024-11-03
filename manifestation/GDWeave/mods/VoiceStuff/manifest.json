@@ -1,0 +1,13 @@
+{
+  "Id": "VoiceStuff",
+  "AssemblyPath": null,
+  "PackPath": "VoiceStuff.pck",
+  "Dependencies": [],
+  "Metadata": {
+    "Name": "VoiceStuff",
+    "Author": "Awesomerly",
+    "Version": "1.0.0",
+    "Description": "Expands the limits on voice pitch and speed in the options menu. Additionally, scrolling on the slider won't make it scroll up and holding shift will increase the granularity.",
+    "Homepage": "https://github.com/Awesomerly/VoiceStuff"
+  }
+}
