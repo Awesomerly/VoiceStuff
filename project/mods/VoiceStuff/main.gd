@@ -4,7 +4,6 @@ var misc: ScrollContainer
 var pitch: HSlider
 var speed: HSlider
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	get_tree().root.connect("child_entered_tree", self, "_hook_playerhud")
 
@@ -12,6 +11,7 @@ func _mouse_connect(node: Node):
 	node.connect("mouse_entered", self, "_mouse_enter")
 	node.connect("mouse_exited", self, "_mouse_exit")
 
+# A ton of this could be a script mod instead of whatever nonsense is going on here.
 func _hook_playerhud(node: Node):
 	if node.name != "playerhud":
 		return
@@ -23,18 +23,25 @@ func _hook_playerhud(node: Node):
 	pitch = voice_options.get_node("HBoxContainer/HSlider")
 	speed = voice_options.get_node("HBoxContainer2/speed")
 
+	pitch.allow_greater = true
+	pitch.allow_lesser = true
+	speed.allow_greater = true
+	speed.allow_lesser = true
+
 	voice_options.connect("ready", self, "_on_options_ready")
 
 	_mouse_connect(pitch)
 	_mouse_connect(speed)
 
 func _on_options_ready():
-	pitch.min_value = 0.01
-	pitch.max_value = 100
-	pitch.value = PlayerData.voice_pitch
-	speed.min_value = -1
-	speed.max_value = 100
-	speed.value = PlayerData.voice_speed
+	_adjust_bounds(pitch)
+	_adjust_bounds(speed)
+
+func _adjust_bounds(slider: Range):
+	slider.min_value = 0.01
+	slider.max_value = 100
+	slider.allow_greater = false
+	slider.allow_lesser = false
 
 func _destroy():
 	misc = null
