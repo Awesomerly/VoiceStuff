@@ -2,11 +2,11 @@
 id = "VoiceStuff"
 name = "VoiceStuff"
 description = "Expands the limits on voice pitch and speed in the options menu. Additionally, scrolling on the slider won't make it scroll up and holding shift will increase the granularity."
-version = "1.0.1"
+version = "1.0.2"
 homepage = "https://github.com/Awesomerly/VoiceStuff"
 author = "Awesomerly"
 
-icon = "icon.png"
+icon = "./project/mods/VoiceStuff/icon.png"
 readme = "README.md"
 
 [project]
